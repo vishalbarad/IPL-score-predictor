@@ -1,6 +1,9 @@
 # IPL-score-predictor
 This project is a part of the Machine learning see live project by clicking this link https://iplscorepredictorml.herokuapp.com/
 
+<img src="https://github.com/vishalbarad/IPL-score-predictor/blob/master/ipl.gif" width="70%" height="70%">
+
+
 #### -- Project Status: [Completed]
 
 ## Project Intro/Objective
@@ -56,6 +59,3 @@ But One-hot encoding categorical variables with high cardinality can cause ineff
 
 ## Contact
 * Feel free to contact me any questions or if you are interested in contributing!
-
-<img src="https://github.com/vishalbarad/IPL-score-predictor/blob/master/ipl.gif" width="50%" height="50%">
-
