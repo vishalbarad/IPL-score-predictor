@@ -57,5 +57,5 @@ But One-hot encoding categorical variables with high cardinality can cause ineff
 ## Contact
 * Feel free to contact me any questions or if you are interested in contributing!
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/vishalbarad/IPL-score-predictor/blob/master/ipl.gif)
 
