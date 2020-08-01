@@ -59,4 +59,4 @@ But One-hot encoding categorical variables with high cardinality can cause ineff
 
 ## Contact
 * Feel free to contact me any questions or if you are interested in contributing!
-<span> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </span>### Thank You
+<p align=center>Thank You</p>
