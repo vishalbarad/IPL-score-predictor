@@ -1,7 +1,7 @@
 # IPL-score-predictor
 This project is a part of the Machine learning see live project by clicking this link https://iplscorepredictorml.herokuapp.com/
 
-<img src="https://github.com/vishalbarad/IPL-score-predictor/blob/master/ipl.gif" width="70%" height="70%">
+<img src="https://github.com/vishalbarad/IPL-score-predictor/blob/master/ipl.gif" width="100%" height="100%">
 
 
 #### -- Project Status: [Completed]
