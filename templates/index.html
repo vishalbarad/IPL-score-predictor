@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IPL score predictor</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mycss.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-size: 100% 100%; background-repeat: no-repeat;background-attachment: fixed;background-position: center;background-image: url({{ url_for('static', filename='banner/ipl_all.jpg') }})">
+    <div class="container">
+        <div class="jumbotron" style="opacity:0.9;">
+            <h1 align="center" style="color: black; font-family: Times New Roman; font-size: 80px; font-style: oblique;">IPL SCORE PREDICTOR</h1>
+        </div>
+
+        <br><br>
+
+        <div class="jumbotron" style="opacity:0.9;">
+            <div class="container" style="opacity:none;">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Add image to the slide for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="{{ url_for('static',filename='banner/IPL-10-Logo-PNG.png') }}" alt="no image found" class="img-thumbnail" class="img-responsive" style="height:350px; max-height: 350px; max-width:100%; width: 100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ url_for('static',filename='banner/all.jpg') }}" alt="no image found" class="img-thumbnail" class="img-responsive"  style="height:350px; max-height: 350px; max-width:100%; width: 100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ url_for('static',filename='banner/ipl_all.jpg') }}" alt="no image found" class="img-thumbnail" class="img-responsive" style="height:350px; max-height: 350px; max-width:100%; width: 100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ url_for('static',filename='banner/csk.jpg') }}" alt="no image found" class="img-thumbnail" class="img-responsive" style="height:350px; max-height: 350px; max-width:100%; width: 100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ url_for('static',filename='banner/mi.jpg') }}" alt="no image found" class="img-thumbnail" class="img-responsive" style="height:350px; max-height: 350px; max-width:100%; width: 100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ url_for('static',filename='banner/mi1.jpg') }}" alt="no image found" class="img-thumbnail" class="img-responsive" style="height:350px; max-height: 350px; max-width:100%; width: 100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ url_for('static',filename='banner/kkr.png') }}" alt="no image found" class="img-thumbnail" class="img-responsive" style="height:350px; max-height: 350px; max-width:100%; width: 100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ url_for('static',filename='banner/kxp.jpg') }}" alt="no image found" class="img-thumbnail" class="img-responsive" style="height:350px; max-height: 350px; max-width:100%; width: 100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ url_for('static',filename='banner/delhi.jpg') }}" alt="no image found" class="img-thumbnail" class="img-responsive" style="height:350px; max-height: 350px; max-width:100%; width: 100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ url_for('static',filename='banner/srh.jpg') }}" alt="no image found" class="img-thumbnail" class="img-responsive" style="height:350px; max-height: 350px; max-width:100%; width: 100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ url_for('static',filename='banner/rr.jpg') }}" alt="no image found" class="img-thumbnail" class="img-responsive" style="height:350px; max-height: 350px; max-width:100%; width: 100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ url_for('static',filename='banner/rcb.jpg') }}" alt="no image found" class="img-thumbnail" class="img-responsive" style="height:350px; max-height: 350px; max-width:100%; width: 100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ url_for('static',filename='banner/rcb1.jpg') }}" alt="no image found" class="img-thumbnail" class="img-responsive" style="height:350px; max-height: 350px; max-width:100%; width: 100%;">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ url_for('static',filename='banner/rcb2.jpg') }}" alt="no image found" class="img-thumbnail" class="img-responsive" style="height:350px; max-height: 350px; max-width:100%; width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-8" style="border:1px solid; border-width: medium;">
+                    <form class="text-center border border-light p-5" action="{{ url_for('predict') }}" method="post">
+                        <p class="h4 mb-4" style="color: black; font-weight: 400; font-size: 30px; font-style: oblique;">Submit details to predict match score</p><br>
+                        <!-- Venue -->
+                        <p class="h4 mb-4" align="left" style="color: black;font-weight: 400; font-style: oblique;"> Select venue </p>
+                        <select class="form-control mb-4" name="venue" required>
+                            <option value="">Select venue</option>
+                            <option value="Barabati Stadium">Barabati Stadium</option>
+                            <option value="Brabourne Stadium">Brabourne Stadium</option>
+                            <option value="Buffalo Park">Buffalo Park</option>
+                            <option value="De Beers Diamond Oval">De Beers Diamond Oval</option>
+                            <option value="Dr DY Patil Sports Academy">Dr DY Patil Sports Academy</option>
+                            <option value="Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium">Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium</option>
+                            <option value="Dubai International Cricket Stadium">Dubai International Cricket Stadium</option>
+                            <option value="Eden Gardens">Eden Gardens</option>
+                            <option value="Feroz Shah Kotla">Feroz Shah Kotla</option>
+                            <option value="Himachal Pradesh Cricket Association Stadium">Himachal Pradesh Cricket Association Stadium</option>
+                            <option value="Holkar Cricket Stadium">Holkar Cricket Stadium</option>
+                            <option value="JSCA International Stadium Complex">JSCA International Stadium Complex</option>
+                            <option value="Kingsmead">Kingsmead</option>
+                            <option value="M Chinnaswamy Stadium">M Chinnaswamy Stadium</option>
+                            <option value="MA Chidambaram Stadium, Chepauk">MA Chidambaram Stadium, Chepauk</option>
+                            <option value="Maharashtra Cricket Association Stadium">Maharashtra Cricket Association Stadium</option>
+                            <option value="New Wanderers Stadium'">New Wanderers Stadium'</option>
+                            <option value="Newlands">Newlands</option>
+                            <option value="OUTsurance Oval">OUTsurance Oval</option>
+                            <option value="Punjab Cricket Association IS Bindra Stadium, Mohali">Punjab Cricket Association IS Bindra Stadium, Mohali</option>
+                            <option value="Punjab Cricket Association Stadium, Mohali">Punjab Cricket Association Stadium, Mohali</option>
+                            <option value="Rajiv Gandhi International Stadium, Uppal">Rajiv Gandhi International Stadium, Uppal</option>
+                            <option value="Sardar Patel Stadium, Motera">Sardar Patel Stadium, Motera</option>
+                            <option value="Sawai Mansingh Stadium">Sawai Mansingh Stadium</option>
+                            <option value="Shaheed Veer Narayan Singh International Stadium">Shaheed Veer Narayan Singh International Stadium</option>
+                            <option value="Sharjah Cricket Stadium">Sharjah Cricket Stadium</option>
+                            <option value="Sheikh Zayed Stadium">Sheikh Zayed Stadium</option>
+                            <option value="St George's Park">St George's Park</option>
+                            <option value="Subrata Roy Sahara Stadium">Subrata Roy Sahara Stadium</option>
+                            <option value="SuperSport Park">SuperSport Park</option>
+                            <option value="Wankhede Stadium">Wankhede Stadium</option>
+                        </select>
+
+
+                        <!-- Batting team -->
+                        <p class="h4 mb-4" align="left" style="color: black;font-weight:400;font-style: oblique;"> Select Batting team </p>
+                        <select class="form-control mb-4" name="batting_team" required>
+                            <option value="">Select a Batting team</option>
+                            <option value="Mumbai Indians">Mumbai Indians</option>
+                            <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                            <option value="Chennai Super Kings">Chennai Super Kings</option>
+                            <option value="Rajasthan Royals">Rajasthan Royals</option>
+                            <option value="Kings XI Punjab">Kings XI Punjab</option>
+                            <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                            <option value="Delhi Daredevils">Delhi Daredevils</option>
+                            <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                        </select>
+
+                        <!-- Bowling team -->
+                        <p class="h4 mb-4" align="left" style="color: black;font-weight:400; font-style: oblique;"> Select Bowling team </p>
+                        <select class="form-control mb-4" name="bowling_team" required>
+                            <option value="">Select a Bowling team</option>
+                            <option value="Mumbai Indians">Mumbai Indians</option>
+                            <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                            <option value="Chennai Super Kings">Chennai Super Kings</option>
+                            <option value="Rajasthan Royals">Rajasthan Royals</option>
+                            <option value="Kings XI Punjab">Kings XI Punjab</option>
+                            <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                            <option value="Delhi Daredevils">Delhi Daredevils</option>
+                            <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                        </select>
+
+                        <p class="h4 mb-4" align="left" style="color: black;font-weight: 400; font-style: oblique;"> Enter current over >5 e.g 7.5 </p>
+                        <input type="number" step="0.01" class="form-control mb-4" min="6" max="15" name="c_over" required>
+
+                        <p class="h4 mb-4" align="left" style="color: black;font-weight: 400; font-style: oblique;"> Enter current run e.g 113 </p>
+                        <input type="number" class="form-control mb-4" min="0" max="300" name="c_run" required>
+
+                        <p class="h4 mb-4" align="left" style="color: black;font-weight: 400; font-style: oblique;"> Enter current wicket e.g 3 </p>
+                        <input type="number" min="0" max="10" class="form-control mb-4" name="c_wicket" required>
+
+                        <p class="h4 mb-4" align="left" style="color: black;font-weight: 400; font-style: oblique;"> Last 5 over run </p>
+                        <input type="number" class="form-control mb-4" min="0" max="150" name="l_run" required>
+
+                        <p class="h4 mb-4" align="left" style="color: black;font-weight: 400; font-style: oblique;"> Last 5 over wicket </p>
+                        <input type="number" class="form-control mb-4" min="0" max="10" name="l_wicket" required>
+                        <br>
+                        <button class="btn btn-info btn-block my-4" type="submit"><p style="font-style: oblique; color:black;">Predict score</p></button><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- Footer -->
+    <div class="container" style="opacity:none;" >
+       <div class='jumbotron' style="opacity:0.9;">
+           <div align="center">
+           <a target="_blank" href="https://github.com/vishalbarad?tab=repositories"><i class="fa fa-github" style="font-size:36px"></i></a>
+           <span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a target="_blank" href="https://www.linkedin.com/in/vishal-barad-926bb4134/"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+           <span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a target="_blank" href="http://mlfromscratch1.blogspot.com"><i class="fa fa-newspaper-o"  style="font-size:36px"></i></a>
+           </div><br>
+           <p class='footer-description' align="center" style="font-style: oblique;">This is a Machine learning based project</p><p class='footer-description' align="center" style="font-style: oblique;">Made with ❤️ by Vishal Barad.</p>
+       </div>
+    </div>
+
+    </body>
+</html>
+</body>
+</html>
+
