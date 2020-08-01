@@ -1,41 +1,49 @@
 # IPL-score-predictor
-Live website
-https://iplscorepredictorml.herokuapp.com/
+This project is a part of the [Machine learning](https://iplscorepredictorml.herokuapp.com/) Other DSWG projects can be found at the [main GitHub repo](https://github.com/sfbrigade/data-science-wg).
 
-*Instructions: Click on the raw button in the upper right hand corner of this box.  Copy and paste the template into the README.md document on your github.  Fill in the titles, information and links where prompted! Feel free to stray a bit to suit your project but try to stick to the format as closely as possible for consistency across DSWG projects.*
-
-# Project Name
-This project is a part of the [Data Science Working Group](http://datascience.codeforsanfrancisco.org) at [Code for San Francisco](http://www.codeforsanfrancisco.org).  Other DSWG projects can be found at the [main GitHub repo](https://github.com/sfbrigade/data-science-wg).
-
-#### -- Project Status: [Active, On-Hold, Completed]
+#### -- Project Status: [Completed]
 
 ## Project Intro/Objective
-The purpose of this project is ________. (Describe the main goals of the project and potential civic impact. Limit to a short paragraph, 3-6 Sentences)
-
-### Partner
-* [Name of Partner organization/Government department etc..]
-* Website for partner
-* Partner contact: [Name of Contact], [slack handle of contact if any]
-* If you do not have a partner leave this section out
+The purpose of this project is to predict the first inning IPL match score based on Venue, Batting team, Bowling team, Runs, Overs and Wickets etc.
 
 ### Methods Used
+* Data gathering
+* Data preprocessing
 * Inferential Statistics
 * Machine Learning
-* Data Visualization
+* Model evaluation
 * Predictive Modeling
-* etc.
+* Model deploying
 
 ### Technologies
-* R 
 * Python
-* D3
-* PostGres, MySql
-* Pandas, jupyter
+* Numpy 
+* Pandas
+* jupyter
 * HTML
+* CSS
 * JavaScript
-* etc. 
+* Flask
+* Heroku
 
 ## Project Description
+This is project based on regression ml algorithm. If you know the venue, current over runs and wickets then you simply predict score by just providing the last 5 over runs and wickets.
+Dataset used by this project is 'ipl.csv' downloaded from kaggle. After downloading and importing dataset(in jupyter Notebook) i did data cleaning first like dropping some unnecessary columns, handling missing values, performing one-hot encoding on categorical variables.
+After that i just divided my dataset into dependent and independent features. (Independent features=Venue,runs,wickets,etc.. | Dependent feature=total)
+After that i just dropped first 5 overs data in every match because first 5 overs are powerplay over ,so i just ignored it.
+After that i split data into training data and testing data.
+After that i perform model selection in which i chose 'Multiplelinear', 'Ridge', 'Lasso' and 'Decision tree' regression algorithm and count accuracy score so i got
+
+| Model          | Training_accuracy | Testing_accuracy |
+| -------------- | ----------------- | ---------------- |
+| Linera         | 0.678325          | 0.668358         |
+| Ridge          | 0.678321          | 0.668351         |
+| Lasso          | 0.678321          | 0.668347         |
+| Decision-tree  | 0.999963          | 0.907869         |
+
+As we can saw among all regression Decision tree regression gave the better result so i chose Decision tree for predection
+But One-hot encoding categorical variables with high cardinality can cause inefficiency in tree-based ensembles. Continuous variables will be given more importance than the dummy variables by the algorithm which will obscure the order of feature importance resulting in poorer performance means i changing of venue,batting team and bowling team did not affect my final prediction output. So i changed model to Ridge regression.
+
 (Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
 
 ## Needs of this project
