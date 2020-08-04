@@ -38,13 +38,13 @@ After that i just dropped first 5 overs data in every match because first 5 over
 After that i split data into training data and testing data.
 After that i perform model selection in which i chose 'Multiplelinear', 'Ridge', 'Lasso', 'Decision tree' and 'Random forest' regression algorithm and count accuracy score so i got
 
-| Model          | Training_accuracy | Testing_accuracy |
-| -------------- | ----------------- | ---------------- |
-| Linera         | 0.678325          | 0.668358         |
-| Ridge          | 0.678321          | 0.668351         |
-| Lasso          | 0.678321          | 0.668347         |
-| Decision-tree  | 0.999963          | 0.907869         |
-| Random forest	 | 0.989497	         | 0.949162         |
+|Model          |Training_accuracy |Testing_accuracy |
+|-------------- |----------------- |---------------- |
+|Linera         |0.678325          |0.668358         |
+|Ridge          |0.678321          |0.668351         |
+|Lasso          |0.678321          |0.668347         |
+|Decision-tree  |0.999963          |0.907869         |
+|Random forest	|0.989497	         |0.949162         |
 
 As we can saw among all regression Decision tree reg and Random forest regression gave the better result so we choose Random forest for predection beacause Ensemble based aglo does not overfit the data.
 After that i saved model using 'joblib' library. After that I creted UI in flask and deployed on 'Heroku'.
