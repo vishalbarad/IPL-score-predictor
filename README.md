@@ -1,5 +1,5 @@
 # IPL-score-predictor
-This project is a part of the Machine learning see live project by clicking this link https://iplscorepredictorml.herokuapp.com/
+This project is a part of the Machine learning see live project by clicking this link https://iplcsp.herokuapp.com/
 
 <img src="https://github.com/vishalbarad/IPL-score-predictor/blob/master/ipl.gif" width="80%" height="80%">
 
@@ -36,7 +36,7 @@ Dataset used by this project is 'ipl.csv' downloaded from kaggle. After download
 After that i just divided my dataset into dependent and independent features. (Independent features=Venue,runs,wickets,etc.. | Dependent feature=total)
 After that i just dropped first 5 overs data in every match because first 5 overs are powerplay over ,so i just ignored it.
 After that i split data into training data and testing data.
-After that i perform model selection in which i chose 'Multiplelinear', 'Ridge', 'Lasso' and 'Decision tree' regression algorithm and count accuracy score so i got
+After that i perform model selection in which i chose 'Multiplelinear', 'Ridge', 'Lasso', 'Decision tree' and 'Random forest' regression algorithm and count accuracy score so i got
 
 | Model          | Training_accuracy | Testing_accuracy |
 | -------------- | ----------------- | ---------------- |
@@ -44,10 +44,10 @@ After that i perform model selection in which i chose 'Multiplelinear', 'Ridge',
 | Ridge          | 0.678321          | 0.668351         |
 | Lasso          | 0.678321          | 0.668347         |
 | Decision-tree  | 0.999963          | 0.907869         |
+| Random forest	 | 0.989497	         | 0.949162         |
 
-As we can saw among all regression Decision tree regression gave the better result so i chose Decision tree for predection
-But One-hot encoding categorical variables with high cardinality can cause inefficiency in tree-based ensembles. Continuous variables will be given more importance than the dummy variables by the algorithm which will obscure the order of feature importance resulting in poorer performance means i changing of venue, batting team and bowling team did not affect my final prediction output so this is the difficulty i faced. So i changed model to Ridge regression. After that i saved model using
-'joblib' library. After that i creted UI in flask and deployed on 'Heroku'.
+As we can saw among all regression Decision tree reg and Random forest regression gave the better result so we choose Random forest for predection beacause Ensemble based aglo does not overfit the data.
+After that i saved model using 'joblib' library. After that I creted UI in flask and deployed on 'Heroku'.
 
 ## Needs of this project
 
