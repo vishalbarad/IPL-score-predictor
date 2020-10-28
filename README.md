@@ -45,7 +45,7 @@ After that i perform model selection in which i chose 'Multiplelinear', 'Ridge',
 
 |Model          |Training_accuracy |Testing_accuracy |
 |-------------- |----------------- |---------------- |
-|Linera         |0.678325          |0.668358         |
+|Linear         |0.678325          |0.668358         |
 |Ridge          |0.678321          |0.668351         |
 |Lasso          |0.678321          |0.668347         |
 |Decision-tree  |0.999963          |0.907869         |
