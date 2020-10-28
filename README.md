@@ -53,7 +53,7 @@ After that i perform model selection in which i chose 'Multiplelinear', 'Ridge',
 
 As we can saw among all regression Decision tree reg and Random forest regression gave the better result so we choose Random forest for predection beacause Ensemble based aglo does not overfit the data.
 
-After that i saved model using 'joblib' library. After that I creted UI in flask and deployed on 'Heroku'.
+After that i saved model using 'joblib' library. After that I created UI in flask and deployed on 'Heroku'.
 
 ## Needs of this project
 
